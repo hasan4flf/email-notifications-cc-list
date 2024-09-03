@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Notifications CC List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 py-5">
+                <h2 id="copyEmails" class="display-6 mb-4">JFJ Email Notifications CC List <i class="bi bi-copy"></i></h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>malvin@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>felix@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>gi@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>gabrielas@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>iang@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>franciscoc@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>toni@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>gaea@getjusticenow.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>victorb@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>abbyroman@farahilaw.com</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ps-0"><span><i class="bi bi-envelope"></i></span>hasan@farahilaw.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('copyEmails').addEventListener('click', function () {
+            // Select all anchor elements with the class 'nav-link'
+            const emailLinks = document.querySelectorAll('.nav-link');
+
+            // Extract the email addresses from the anchor elements
+            const emails = Array.from(emailLinks).map(link => link.textContent.trim());
+
+            // Join the emails with a comma separator
+            const emailString = emails.join(',');
+
+            // Copy the email string to the clipboard
+            navigator.clipboard.writeText(emailString).then(() => {
+                alert('Emails copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy emails: ', err);
+            });
+        });
+    </script>
+</body>
+
+</html>
